@@ -18,4 +18,27 @@
 
 -->  Omit  [  type User = {id: number, name: string}  type Guest = Omit<User, 'name'> ]
 
--->  generics
+-->  generics :
+       -> function:
+          const f = <T,>(a: T) => {
+            return [a]
+          }
+
+      -> React props:
+
+           type ButtonProps<T> = {
+              count: T;
+              countHistory: T[];
+          }
+          
+          const Button = <T,>({count, countHistory}: ButtonProps<T>) => {
+          
+              return (
+                  <button>
+                      click
+                  </button>
+              )
+          }
+
+
+ -->  `unknown` type
