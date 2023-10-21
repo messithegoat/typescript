@@ -1,0 +1,21 @@
+
+--> Union type
+--> Record<string, number>   [ type keys = 'one' | 'two',  Record<keys, number> ]
+  --> Tuple :  ['hello', 1, false]
+-->  React.ComponentPropsWithoutRef('button')
+--> ...rest and ...spread
+-->  useState: 
+       for primitive values(string, number, boolean) ts can infer the types. 
+       for others:
+         const [someobj, setSomeObj] = useState<objtypedefinition | null>(null) (null initially, then objtypedefinition type after data is fetched)
+
+-> useRef:
+     const buttonRef = useRef<HTMLButtonElement>(null)
+
+-->  as const
+
+--> as typedefinition  [  const cart = locaStorage.getItem('cart') as Cart ]
+
+-->  Omit  [  type User = {id: number, name: string}  type Guest = Omit<User, 'name'> ]
+
+-->  generics
